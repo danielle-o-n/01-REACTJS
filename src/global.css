@@ -1,0 +1,23 @@
+:root{
+    --background-body: #121214;
+    --background-card: #202024;
+    --color-placeholder: #7C7C8A;
+    --color-text-apoio: #8D8D99;
+    --green-lights: #00B37E;
+    --color-title: #E1E1E6;
+    --color-text: #C4C4CC;
+    --red-danger: #F75A68;
+    --divider: #323238;
+    --green: #00875F;
+    --white: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* vai expremendo o conteudo sem aumentar a caixa*/
+}
+body{
+    background-color: var(--background-body);
+    color: var(--color-text);
+    font-family: 'Roboto', sans-serif;
+}
