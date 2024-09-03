@@ -1,8 +1,14 @@
 .header{
     background-color: var(--background-card);
-    height: 100px;
-    padding: 20px 0;
+    height: 6.25rem;
+    padding: 20px 0; /* ou 1,25rem ( 1rem = 16 px) */
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
+    color: var(--color-title);
 }
+.header img {
+    height: 3rem;
+}
+

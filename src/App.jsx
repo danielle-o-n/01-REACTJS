@@ -1,6 +1,9 @@
-import { useState } from 'react'
 import { Post } from './components/Post'
 import { Header } from './components/Header'
+import { Sidebar } from './components/Sidebar';
+
+import style from './App.module.css'
+
 import './global.css';
 
 function App() {
@@ -8,9 +11,21 @@ function App() {
   return (
     <>
     <Header/>
-    <Post titulo="Teste de props" 
-      texto="lorem impsrnkuvsgmnlsrtsnluh" 
-    />
+    
+    <div className={style.sectionMain}>
+      <Sidebar/>
+      <main>
+        <Post 
+          titulo="Teste de props" 
+          texto="lorem impsrnkuvsgmnlsrtsnluh" 
+        />
+        <Post 
+          titulo="Danielle " 
+          texto="dlfldml" 
+        />
+      </main>
+    </div>
+
     </>
   )
 }

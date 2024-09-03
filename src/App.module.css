@@ -1,0 +1,8 @@
+.sectionMain{
+    width: 70rem;
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
