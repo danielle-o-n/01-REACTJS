@@ -1,4 +1,8 @@
+
+
+import { PencilSimpleLine } from "@phosphor-icons/react";
 import style from "./Sidebar.module.css";
+
 
 export function Sidebar (params) {
     return(
@@ -9,7 +13,7 @@ export function Sidebar (params) {
                 <strong>Danielle Oliveira</strong>
                 <p>Web Developer</p>
             </div>
-            <footer><a href="#"><strong>Editar seu perfil</strong></a></footer>
+            <footer><a href="#"><PencilSimpleLine size={20} /><strong>Editar seu perfil</strong></a></footer>
         </aside>
     )
 }
