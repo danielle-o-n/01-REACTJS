@@ -19,10 +19,7 @@ function App() {
           titulo="Teste de props" 
           texto="lorem impsrnkuvsgmnlsrtsnluh" 
         />
-        <Post 
-          titulo="Danielle " 
-          texto="dlfldml" 
-        />
+        
       </main>
     </div>
 

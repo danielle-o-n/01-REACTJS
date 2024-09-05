@@ -1,0 +1,25 @@
+article{
+    background-color: var(--background-card);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+article header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.author{
+    display: flex;
+    gap: 1rem;
+}
+.names{
+    display: flex;
+    flex-direction: column;
+}
+.author img{
+    height: 3.75rem;
+    width:  3.75rem;
+    border-radius: 5px;
+    border: solid var(--background-card) 2.5px;
+    outline: solid var(--green-lights) 2px;
+}
