@@ -19,8 +19,8 @@
 .profile img{
     height: 3.75rem;
     width:  3.75rem;
-    border-radius: 5px;
-    border: solid var(--background-card) 2.5px;
+    border-radius: 8px;
+    border: solid var(--background-card) 4px;
     outline: solid var(--green-lights) 2px;
     margin-top: -45px;
     margin-bottom: 1rem;
@@ -29,12 +29,12 @@
     font-size: 0.875rem;
     color: var( --color-text-apoio );
 }
-footer{
+aside footer{
     border-top: solid 1px var(--divider);
     padding: 1.4rem 2rem;
     display: flex;
 }
-footer a{
+aside footer a{
     border-radius: 8px;
     border: solid 1px var(--green-lights);
     color: var(--green-lights);
@@ -44,4 +44,9 @@ footer a{
     display: flex;
     align-items: center;
     gap: 0.35rem;
+    transition: background-color 0.1s ;
+}
+aside footer a:hover{
+    background-color: var(--green-lights);
+    color: var(--white);
 }

@@ -16,10 +16,15 @@ function App() {
       <Sidebar/>
       <main>
         <Post 
-          titulo="Teste de props" 
+          name="Danielle o" 
+          cargo="Web Developer"
           texto="lorem impsrnkuvsgmnlsrtsnluh" 
         />
-        
+        <Post 
+          name="Teste de props" 
+          cargo="dfaetera"
+          texto="lorem impsrnkuvsgmnlsrtsnluh" 
+        />
       </main>
     </div>
 

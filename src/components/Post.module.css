@@ -3,23 +3,91 @@ article{
     padding: 2.5rem;
     border-radius: 8px;
 }
+article + article {  /* Faz com que o proximo elemento tenha essas propriedades */
+    margin-top: 2rem;
+}
 article header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
-
+span, time{
+    font-size: 0.875rem;
+    color: var(--color-text-apoio);
+}
 .author{
     display: flex;
     gap: 1rem;
+    align-items: center;
+    color: var( --color-title);
 }
 .names{
     display: flex;
     flex-direction: column;
+    line-height: 1.5rem;
 }
 .author img{
     height: 3.75rem;
     width:  3.75rem;
-    border-radius: 5px;
-    border: solid var(--background-card) 2.5px;
+    border-radius: 8px;
+    border: solid var(--background-card) 4px;
     outline: solid var(--green-lights) 2px;
+
+}
+.comentario a {
+    text-decoration: none;
+    color: var(--green-lights);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.comentario p, .comentario a{
+    margin-bottom: 1.5rem;
+    line-height: 160%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px var(--divider);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+form textarea{
+    width: 100%;
+    height: 6rem;
+    background-color: var(--background-body);
+    border-radius: 8px;
+    border: 0;
+    margin: 1rem 0 0 0;
+    color: var(--color-placeholder);
+    padding: 1rem;
+    resize: none;
+}
+form textarea:focus{
+    outline: solid 1px var(--green-lights);
+    color: var(--color-text);
+}
+form:focus-within footer{
+    visibility: visible;
+    max-height: none;
+}
+form footer{
+    visibility: hidden;
+    max-height: 0;
+}
+button{
+    background-color: var(--green);
+    height: 3rem;
+    width: 6.75rem;
+    border-radius: 8px;
+    border: 0;
+    color: var(--white);
+    font-weight: bold;
+    margin: 1rem 0 0 0;
+    transition: background-color 0.1s ;
+}
+button:hover{
+    background-color: var(--green-lights);
+    cursor: pointer;
 }
