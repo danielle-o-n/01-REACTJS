@@ -1,9 +1,17 @@
 .sectionMain{
-    width: 70rem;
+    max-width: 70rem;
     display: grid;
     grid-template-columns: 16rem 1fr;
     gap: 2rem;
     margin: 2rem auto;
     padding: 0 2rem;
-    align-items: start;
+    align-items: flex-start;
+}
+@media (max-width: 768px){
+        html{
+            font-size: 87.5%;
+        }
+        .sectionMain{
+        grid-template-columns: 1fr;
+    }
 }

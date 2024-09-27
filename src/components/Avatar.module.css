@@ -1,0 +1,12 @@
+.avatar{
+    height: calc(3rem + 12px);
+    width:  calc(3rem + 12px);
+    border-radius: 8px;
+    border: solid var(--background-card) 4px;
+    outline: solid var(--green-lights) 2px;
+}
+.hasBorder{
+    height: 3rem;
+    width:  3rem;
+    border-radius: 8px;
+}

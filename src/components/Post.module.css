@@ -12,7 +12,7 @@ article header{
     align-items: center;
     margin-bottom: 1.5rem;
 }
-span, time{
+.author span, time{
     font-size: 0.875rem;
     color: var(--color-text-apoio);
 }
@@ -26,14 +26,6 @@ span, time{
     display: flex;
     flex-direction: column;
     line-height: 1.5rem;
-}
-.author img{
-    height: 3.75rem;
-    width:  3.75rem;
-    border-radius: 8px;
-    border: solid var(--background-card) 4px;
-    outline: solid var(--green-lights) 2px;
-
 }
 .comentario a {
     text-decoration: none;
@@ -76,7 +68,7 @@ form footer{
     visibility: hidden;
     max-height: 0;
 }
-button{
+button[type=submit]{
     background-color: var(--green);
     height: 3rem;
     width: 6.75rem;
@@ -87,7 +79,7 @@ button{
     margin: 1rem 0 0 0;
     transition: background-color 0.1s ;
 }
-button:hover{
+button[type=submit]:hover{
     background-color: var(--green-lights);
     cursor: pointer;
 }

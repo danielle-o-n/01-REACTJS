@@ -1,11 +1,13 @@
-import style from "./Post.module.css";
+import { Avatar } from './Avatar'
+import { CommentContent } from './CommentContent'
+import style from "./Post.module.css"
 
 export function Post (props) {
     return (
     <article>
         <header>
            <div className={style.author}>
-                <img src="https://avatars.githubusercontent.com/u/60072830?v=4" alt="" />
+                <Avatar hasBorder src="https://avatars.githubusercontent.com/u/60072830?v=4" alt="" />
                 <div className={style.names}>
                     <strong>{props.name}</strong>
                     <span>{props.cargo}</span>
@@ -27,6 +29,8 @@ export function Post (props) {
             <textarea placeholder="Escreva um comentário..."></textarea>
             <footer><button type="submit">Publicar</button></footer>
         </form>
+        <CommentContent/>
+        <CommentContent/>
     </article>
     )
 }

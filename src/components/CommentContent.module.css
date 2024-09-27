@@ -1,0 +1,62 @@
+.commentContent{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.commentContent img{
+    height: 3.75rem;
+    width:  3.75rem;
+    border-radius: 8px;
+}
+.content{
+    flex: 1;
+}
+.comment{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 9px;
+    background-color: var(--color-background-comment);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+.comment header{
+    align-items: flex-start;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+.profile strong{
+    color: var(--color-title);
+}
+button{
+    background-color: transparent;
+    color: var( --color-text-apoio);
+    border: 0;
+    line-height: 0;
+    cursor: pointer;
+
+}
+.commentContent footer button{
+    font-weight: bold;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+}
+.commentContent footer button svg{
+    margin-right: 0.5rem;
+}
+.commentContent footer button:hover{
+    color: var(--green-lights);
+}
+.commentContent button:hover{
+    border-radius: 2px;
+    color: var(--red);
+}
+.commentContent footer button span::before {
+    content: "\2022";
+    padding: 0 0.25rem;
+}

@@ -3,6 +3,7 @@
     --background-card: #202024;
     --color-placeholder: #7C7C8A;
     --color-text-apoio: #8D8D99;
+    --color-background-comment: #29292E;
     --green-lights: #00B37E;
     --color-title: #E1E1E6;
     --color-text: #C4C4CC;
@@ -10,6 +11,7 @@
     --divider: #323238;
     --green: #00875F;
     --white: white;
+    --red: #F75A68;
 }
 *{
     margin: 0;
