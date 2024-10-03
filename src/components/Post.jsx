@@ -2,27 +2,45 @@ import { Avatar } from './Avatar'
 import { CommentContent } from './CommentContent'
 import style from "./Post.module.css"
 
-export function Post (props) {
+export function Post ({author, texto, }) {
+    // console.log(texto);
+    
     return (
     <article>
         <header>
            <div className={style.author}>
-                <Avatar hasBorder src="https://avatars.githubusercontent.com/u/60072830?v=4" alt="" />
+                <Avatar hasBorder src={author.urlAuthor} alt="" />
                 <div className={style.names}>
-                    <strong>{props.name}</strong>
-                    <span>{props.cargo}</span>
+                    <strong>{author.name}</strong>
+                    <span>{author.cargo}</span>
                 </div>
            </div>
            <time dateTime="2024/09/04 22:36">publicado a 1h</time>
         </header>
         <div className={style.comentario}>
-            <p>Fala galeraa 👋</p>
+        {/* Utilizando IF */}
+        
+            {/* {texto.map(iten =>{
+                if (iten.type == "paragraph") {
+                   return <p>{iten.text}</p>
+                }else if (iten.type == 'ancora'){
+                    return <p><a href="#">{iten.text}</a></p>
+                }
+            })} */}
 
-            <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-            <div>
-                <a href="#">👉jane.design/doctorcare</a>
-                <a href="#">#novoprojeto #nlw #rocketseat</a>
-            </div>
+        {/* Utilizando SWITCH */}
+            {texto.map(iten =>{
+                switch (iten.type) {
+                    case 'paragraph':
+                       return <p>{iten.text}</p>
+                       break
+                    case 'ancora':
+                       return <p><a href="#">{iten.text}</a></p>
+                       break
+                    default:
+                        break;
+                }
+            })}
         </div>
         <form>
             <strong>Deixe seu feedback</strong>
