@@ -24,7 +24,7 @@ const posts = [
   { 
     id:2,
     author: {
-      urlAuthor: "",
+      urlAuthor: "https://avatars.githubusercontent.com/u/60072830?v=4",
       name: "Testeee o",
       cargo: "Web dev",
     },

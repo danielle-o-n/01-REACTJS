@@ -1,9 +1,26 @@
+import  { format, formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 import { Avatar } from './Avatar'
 import { CommentContent } from './CommentContent'
 import style from "./Post.module.css"
+import { useState } from 'react';
 
-export function Post ({author, texto, }) {
-    // console.log(texto);
+const arrayDados= ['oii']
+
+export function Post ({author, texto, dataPublicacao }) {
+    const [arrayComentarios, setArrayComentarios] = useState(arrayDados)
+    const dataFormatada = format( dataPublicacao, "d 'de' LLLL 'às' HH:mm'h'", {locale: ptBR} )
+    const dataComTempo =  formatDistanceToNow(dataPublicacao, {locale: ptBR, addSuffix: true})
+  
+
+    function addNovoComment() {
+        
+        event.preventDefault()
+        const newComment = event.target.textoComentario.value
+        setArrayComentarios([...arrayComentarios, newComment ])
+        event.target.textoComentario.value = ''
+    }
+       
     
     return (
     <article>
@@ -15,7 +32,7 @@ export function Post ({author, texto, }) {
                     <span>{author.cargo}</span>
                 </div>
            </div>
-           <time dateTime="2024/09/04 22:36">publicado a 1h</time>
+           <time title={dataFormatada} dateTime=''>{dataComTempo}</time>
         </header>
         <div className={style.comentario}>
         {/* Utilizando IF */}
@@ -42,13 +59,18 @@ export function Post ({author, texto, }) {
                 }
             })}
         </div>
-        <form>
+        <form onSubmit={addNovoComment}>
             <strong>Deixe seu feedback</strong>
-            <textarea placeholder="Escreva um comentário..."></textarea>
+            <textarea name="textoComentario" placeholder="Escreva um comentário..."></textarea>
             <footer><button type="submit">Publicar</button></footer>
         </form>
-        <CommentContent/>
-        <CommentContent/>
+        <div>
+                    
+            {arrayComentarios.map( comentario =>{
+                
+                return <CommentContent a={comentario}/>
+            })}
+         </div> 
     </article>
     )
 }
